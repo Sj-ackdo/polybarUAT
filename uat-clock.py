@@ -11,4 +11,9 @@ currentTime = int(datetime.now(timezone.utc).timestamp())
 def getEpochTime():
     return currentTime - epochTime
 
-print(getEpochTime())
+def UATsv2():
+    uat = getEpochTime()
+    return round(uat / pow(42,2.4))     #UAT year equivalent
+
+print("UATsv1:", getEpochTime(), "|", "UATsv2:", UATsv2())
+
